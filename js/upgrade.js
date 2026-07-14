@@ -31,7 +31,7 @@ const ign=document.getElementById("ign").value;
 
 const discord=document.getElementById("discord").value;
 
-const reference=document.getElementById("reference").value;
+
 
 const message=document.getElementById("message").value;
 
