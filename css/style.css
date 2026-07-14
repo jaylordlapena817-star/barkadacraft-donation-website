@@ -176,4 +176,21 @@ margin-bottom:20px;
 margin-top:20px;
 
 }
+   .stats{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+gap:20px;
+
+margin-bottom:30px;
+
+}
+
+.stats .card{
+
+text-align:center;
+
+}
 }
