@@ -1,24 +1,30 @@
 // Firebase SDK
-import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+import { 
+initializeApp 
+} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
 
-import {
-    db,
-    ref,
-    push,
-    set
-} from "./firebase.js";
 
 import {
 getAuth
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
 
-export const auth = getAuth(app);
+
+import {
+getDatabase,
+ref,
+push,
+set
+} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-database.js";
+
+
 import {
 getStorage,
 ref as storageRef,
 uploadBytes,
 getDownloadURL
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-storage.js";
+
+
 
 const firebaseConfig = {
 
@@ -40,10 +46,25 @@ measurementId: "G-FYWB6LBG34"
 
 };
 
+
+
 const app = initializeApp(firebaseConfig);
+
+
+
+export const auth = getAuth(app);
 
 export const db = getDatabase(app);
 
 export const storage = getStorage(app);
 
-export { ref, push, set, storageRef, uploadBytes, getDownloadURL };
+
+
+export {
+ref,
+push,
+set,
+storageRef,
+uploadBytes,
+getDownloadURL
+};
