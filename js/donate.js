@@ -87,8 +87,6 @@ form.addEventListener("submit", async (e) => {
 
             amount,
 
-            reference,
-
             message,
 
             receiptUrl,
