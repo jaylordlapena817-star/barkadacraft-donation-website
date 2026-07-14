@@ -193,4 +193,26 @@ margin-bottom:30px;
 text-align:center;
 
 }
+
+  .verify{
+
+background:#22c55e;
+
+margin-bottom:10px;
+
+}
+
+.invalid{
+
+background:#f59e0b;
+
+margin-bottom:10px;
+
+}
+
+.delete{
+
+background:#ef4444;
+
+} 
 }
