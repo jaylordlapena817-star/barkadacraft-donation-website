@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Extend Server Time</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+⛏ BarkadaCraft SMP
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="donate.html" class="active">Extend Time</a>
+<a href="upgrade.html">Upgrade</a>
+<a href="donators.html">Donators</a>
+<a href="admin-login.html">Admin</a>
+</nav>
+
+</header>
+
+<div class="container">
+
+<h1>Extend Server Time</h1>
+
+<p>Select how many months you want to sponsor.</p>
+
+<form id="donationForm">
+
+<label>Extension</label>
+
+<select id="months" required>
+
+<option value="">Select</option>
+
+<option value="1">1 Month - ₱150</option>
+
+<option value="2">2 Months - ₱300</option>
+
+<option value="3">3 Months - ₱450</option>
+
+</select>
+
+<label>Minecraft IGN</label>
+
+<input
+type="text"
+id="ign"
+placeholder="Minecraft Username"
+required>
+
+<label>Discord Username</label>
+
+<input
+type="text"
+id="discord"
+placeholder="username">
+
+<label>Reference Number</label>
+
+<input
+type="text"
+id="reference"
+placeholder="GCash Reference Number"
+required>
+
+<label>Message</label>
+
+<textarea
+id="message"
+placeholder="Optional"></textarea>
+
+<button
+type="button"
+id="showQR">
+Show GCash QR
+</button>
+
+<div id="qrBox" style="display:none;">
+
+<img
+src="images/gcash-qr.png"
+alt="GCash QR"
+style="width:250px;border-radius:10px;">
+
+<p>
+Scan the QR code then upload your receipt below.
+</p>
+
+</div>
+
+<label>Receipt Screenshot</label>
+
+<input
+type="file"
+id="receipt"
+accept="image/*"
+required>
+
+<button
+type="submit">
+Submit Donation
+</button>
+
+</form>
+
+</div>
+
+<footer>
+
+© 2026 BarkadaCraft SMP
+
+</footer>
+
+<script src="js/donate.js"></script>
+
+</body>
+</html>
