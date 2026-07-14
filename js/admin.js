@@ -2,9 +2,10 @@ import { db, auth } from "./firebase.js";
 
 import {
     ref,
-    onValue
+    onValue,
+    update,
+    remove
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-database.js";
-
 import {
     signOut
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
