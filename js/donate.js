@@ -1,12 +1,8 @@
 import {
     db,
-    storage,
     ref,
     push,
-    set,
-    storageRef,
-    uploadBytes,
-    getDownloadURL
+    set
 } from "./firebase.js";
 
 const form = document.getElementById("donationForm");
@@ -45,13 +41,28 @@ form.addEventListener("submit", async (e) => {
 
     try {
 
-        const fileName = Date.now() + "_" + receipt.name;
+        // Upload receipt to Cloudinary
+        const formData = new FormData();
 
-        const receiptRef = storageRef(storage, "receipts/" + fileName);
+        formData.append("file", receipt);
 
-        await uploadBytes(receiptRef, receipt);
+        formData.append("upload_preset", "minecraft_receipts");
 
-        const receiptUrl = await getDownloadURL(receiptRef);
+        const upload = await fetch(
+            "https://api.cloudinary.com/v1_1/phomucim/image/upload",
+            {
+                method: "POST",
+                body: formData
+            }
+        );
+
+        const result = await upload.json();
+
+        if (!result.secure_url) {
+            throw new Error("Cloudinary upload failed.");
+        }
+
+        const receiptUrl = result.secure_url;
 
         const donationRef = push(ref(db, "donations"));
 
