@@ -97,6 +97,23 @@ form.addEventListener("submit", async (e) => {
 
         });
 
+        // Send Discord notification
+await fetch("https://barkada-craft-backend.onrender.com/donation", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        ign,
+        discord,
+        type: "Extend Time",
+        duration: months + " Month(s)",
+        amount,
+        message,
+        receiptUrl
+    })
+});
+
         alert("Donation submitted successfully! Please wait for admin verification.");
 
         form.reset();
