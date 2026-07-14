@@ -28,9 +28,11 @@
 
 </header>
 
+
 <div class="container">
 
 <h1>Donation Dashboard</h1>
+
 
 <div class="stats">
 
@@ -56,21 +58,87 @@
 
 </div>
 
+
+
+<!-- SERVER SETTINGS -->
+
+<div class="card">
+
+<h2>⛏ Server Settings</h2>
+
+
+<label>
+Days Left
+</label>
+
+<input
+type="number"
+id="daysLeft"
+placeholder="Example: 30"
+>
+
+
+<label>
+Current Plan
+</label>
+
+<select id="currentPlan">
+
+<option value="Saver I">
+Saver I
+</option>
+
+<option value="Saver II">
+Saver II
+</option>
+
+<option value="Super Saver">
+Super Saver
+</option>
+
+<option value="Saver X">
+Saver X
+</option>
+
+<option value="Eco Silver">
+Eco Silver
+</option>
+
+</select>
+
+
+<button id="saveServer">
+
+Save Server Status
+
+</button>
+
+
+</div>
+
+
+
+<br>
+
+
 <input
 type="text"
 id="search"
 placeholder="Search IGN...">
 
+
 <br><br>
+
 
 <div id="donationList">
 
 </div>
 
+
 </div>
+
 
 <script type="module" src="js/admin.js"></script>
 
 </body>
-
 </html>
