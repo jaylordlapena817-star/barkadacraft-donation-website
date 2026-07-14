@@ -103,4 +103,67 @@ nav{
     justify-content:center;
 }
 
+.container{
+    width:90%;
+    max-width:700px;
+    margin:40px auto;
+    background:#1f2937;
+    padding:30px;
+    border-radius:15px;
+}
+
+.container h1{
+    color:#4ade80;
+    margin-bottom:15px;
+}
+
+.container p{
+    margin-bottom:20px;
+}
+
+label{
+    display:block;
+    margin-top:20px;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#374151;
+    color:white;
+}
+
+textarea{
+    resize:vertical;
+    min-height:120px;
+}
+
+button{
+    width:100%;
+    margin-top:20px;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#22c55e;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#16a34a;
+}
+
+#qrBox{
+    margin-top:20px;
+    text-align:center;
+}
+   
 }
