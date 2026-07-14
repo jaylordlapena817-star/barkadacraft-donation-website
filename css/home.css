@@ -1,0 +1,93 @@
+/* ==========================
+   HERO SECTION
+========================== */
+
+.hero{
+    width:100%;
+    min-height:80vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.hero h1{
+    font-size:52px;
+    color:#4ade80;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    color:#d1d5db;
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:40px;
+}
+
+.buttons{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+/* ==========================
+   INFO CARD
+========================== */
+
+.card{
+    width:90%;
+    max-width:1000px;
+    background:#1f2937;
+    border-radius:18px;
+    padding:30px;
+    margin:40px auto;
+    text-align:center;
+    border:1px solid rgba(255,255,255,.08);
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+.card h2{
+    color:#4ade80;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#d1d5db;
+    line-height:1.8;
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:36px;
+}
+
+.hero p{
+    font-size:16px;
+}
+
+.buttons{
+    flex-direction:column;
+    width:100%;
+}
+
+.btn{
+    width:100%;
+    max-width:320px;
+    margin:auto;
+}
+
+.card{
+    width:95%;
+    padding:20px;
+}
+
+}
