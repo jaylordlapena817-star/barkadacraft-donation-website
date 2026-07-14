@@ -26,7 +26,7 @@ form.addEventListener("submit", async (e) => {
 
     const discord = document.getElementById("discord").value.trim();
 
-    const reference = document.getElementById("reference").value.trim();
+    
 
     const message = document.getElementById("message").value.trim();
 
