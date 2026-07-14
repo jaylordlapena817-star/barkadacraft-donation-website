@@ -110,13 +110,11 @@ function render() {
 
 <p><b>Date:</b> ${new Date(data.createdAt).toLocaleString()}</p>
 
-<img src="${data.receiptUrl}">
-style="
-width:100%;
-max-width:300px;
-border-radius:10px;
-margin-top:15px;
-">
+<img
+src="${data.receiptUrl}"
+class="receipt-img"
+onclick="window.open('${data.receiptUrl}','_blank')"
+>
 
 <br><br>
 
