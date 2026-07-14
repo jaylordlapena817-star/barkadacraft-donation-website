@@ -1,5 +1,6 @@
 import { db, auth } from "./firebase.js";
 
+
 import {
     ref,
     onValue,
@@ -9,7 +10,19 @@ import {
 import {
     signOut
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+import {
+    onAuthStateChanged
+} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
 
+onAuthStateChanged(auth, (user) => {
+
+    if (!user) {
+
+        location.href = "admin-login.html";
+
+    }
+
+});
 const donationList = document.getElementById("donationList");
 
 const total = document.getElementById("total");
