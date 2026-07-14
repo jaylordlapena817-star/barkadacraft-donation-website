@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Dashboard</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+⛏ BarkadaCraft Admin
+</div>
+
+<nav>
+
+<a href="#" id="logout">Logout</a>
+
+</nav>
+
+</header>
+
+<div class="container">
+
+<h1>Donation Dashboard</h1>
+
+<div class="stats">
+
+<div class="card">
+<h2 id="total">0</h2>
+<p>Total Donations</p>
+</div>
+
+<div class="card">
+<h2 id="pending">0</h2>
+<p>Pending</p>
+</div>
+
+<div class="card">
+<h2 id="verified">0</h2>
+<p>Verified</p>
+</div>
+
+<div class="card">
+<h2 id="invalid">0</h2>
+<p>Invalid</p>
+</div>
+
+</div>
+
+<input
+type="text"
+id="search"
+placeholder="Search IGN...">
+
+<br><br>
+
+<div id="donationList">
+
+</div>
+
+</div>
+
+<script type="module" src="js/admin.js"></script>
+
+</body>
+
+</html>
