@@ -207,3 +207,45 @@ document.addEventListener("click", async (e) => {
     }
 
 });
+
+const saveServer = document.getElementById("saveServer");
+
+
+saveServer.onclick = async()=>{
+
+
+const daysLeft =
+document.getElementById("daysLeft").value;
+
+
+const currentPlan =
+document.getElementById("currentPlan").value;
+
+
+if(!daysLeft){
+
+alert("Please enter days left!");
+
+return;
+
+}
+
+
+await set(ref(db,"server"),{
+
+
+daysLeft: Number(daysLeft),
+
+
+currentPlan: currentPlan,
+
+
+updatedAt: new Date().toISOString()
+
+
+});
+
+
+alert("Server status updated!");
+
+};
