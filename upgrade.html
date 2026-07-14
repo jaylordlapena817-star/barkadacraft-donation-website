@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Upgrade Server</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+⛏ BarkadaCraft SMP
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="donate.html">Extend Time</a>
+
+<a href="upgrade.html" class="active">Upgrade</a>
+
+<a href="donators.html">Donators</a>
+
+<a href="admin-login.html">Admin</a>
+
+</nav>
+
+</header>
+
+<div class="container">
+
+<h1>Upgrade Server</h1>
+
+<h3>Current Plan</h3>
+
+<div class="card">
+
+<h2>Saver I</h2>
+
+<p>3GB RAM</p>
+
+<p>2 vCores</p>
+
+<p>15GB NVMe SSD</p>
+
+</div>
+
+<form id="upgradeForm">
+
+<label>Select Plan</label>
+
+<select id="plan" required>
+
+<option value="">Choose Plan</option>
+
+<option value="Saver II">Saver II - ₱200</option>
+
+<option value="Super Saver">Super Saver - ₱250</option>
+
+<option value="Saver X">Saver X - ₱380</option>
+
+<option value="Eco Silver">Eco Silver - ₱600</option>
+
+</select>
+
+<label>Minecraft IGN</label>
+
+<input
+type="text"
+id="ign"
+required>
+
+<label>Discord Username</label>
+
+<input
+type="text"
+id="discord">
+
+<label>Reference Number</label>
+
+<input
+type="text"
+id="reference"
+required>
+
+<label>Message</label>
+
+<textarea id="message"></textarea>
+
+<button
+type="button"
+id="showQR">
+
+Show GCash QR
+
+</button>
+
+<div id="qrBox" style="display:none;">
+
+<img
+src="images/gcash-qr.png"
+width="250">
+
+<p>
+
+Scan the QR then upload your receipt.
+
+</p>
+
+</div>
+
+<label>Receipt Screenshot</label>
+
+<input
+type="file"
+id="receipt"
+accept="image/*"
+required>
+
+<button type="submit">
+
+Submit Upgrade
+
+</button>
+
+</form>
+
+</div>
+
+<footer>
+
+© 2026 BarkadaCraft SMP
+
+</footer>
+
+<script type="module" src="js/upgrade.js"></script>
+
+</body>
+
+</html>
