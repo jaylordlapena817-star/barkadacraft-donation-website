@@ -140,3 +140,54 @@ Delete
 }
 
 search.oninput = render;
+
+document.addEventListener("click", async (e) => {
+
+    const id = e.target.dataset.id;
+
+    if (!id) return;
+
+    // Verify
+    if (e.target.classList.contains("verify")) {
+
+        if (!confirm("Verify this payment?")) return;
+
+        await update(ref(db, "donations/" + id), {
+
+            status: "Verified",
+            verifiedAt: new Date().toISOString()
+
+        });
+
+        alert("Payment Verified!");
+
+    }
+
+    // Invalid
+    if (e.target.classList.contains("invalid")) {
+
+        const reason = prompt("Reason (Optional):") || "";
+
+        await update(ref(db, "donations/" + id), {
+
+            status: "Invalid",
+            invalidReason: reason
+
+        });
+
+        alert("Payment marked as Invalid!");
+
+    }
+
+    // Delete
+    if (e.target.classList.contains("delete")) {
+
+        if (!confirm("Delete this donation?")) return;
+
+        await remove(ref(db, "donations/" + id));
+
+        alert("Donation deleted!");
+
+    }
+
+});
