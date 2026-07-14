@@ -108,6 +108,23 @@ createdAt:new Date().toISOString()
 
 });
 
+    // Send Discord notification
+await fetch("https://barkada-craft-backend.onrender.com/donation", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        ign,
+        discord,
+        type: "Upgrade",
+        currentPlan: "Saver I",
+        selectedPlan: plan,
+        amount,
+        message,
+        receiptUrl
+    })
+});
 
 alert("Upgrade request submitted!");
 
