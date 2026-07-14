@@ -98,8 +98,6 @@ ign,
 
 discord,
 
-reference,
-
 message,
 
 receiptUrl,
