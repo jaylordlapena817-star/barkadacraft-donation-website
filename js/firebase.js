@@ -9,6 +9,11 @@ set
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-database.js";
 
 import {
+getAuth
+} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+
+export const auth = getAuth(app);
+import {
 getStorage,
 ref as storageRef,
 uploadBytes,
