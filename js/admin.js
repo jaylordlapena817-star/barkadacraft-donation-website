@@ -231,17 +231,16 @@ return;
 }
 
 
+const expireDate =
+Date.now() + (Number(daysLeft) * 24 * 60 * 60 * 1000);
+
 await set(ref(db,"server"),{
 
+expireDate,
 
-daysLeft: Number(daysLeft),
-
-
-currentPlan: currentPlan,
-
+currentPlan,
 
 updatedAt: new Date().toISOString()
-
 
 });
 
