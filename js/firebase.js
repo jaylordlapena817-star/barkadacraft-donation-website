@@ -2,11 +2,11 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
 
 import {
-getDatabase,
-ref,
-push,
-set
-} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-database.js";
+    db,
+    ref,
+    push,
+    set
+} from "./firebase.js";
 
 import {
 getAuth
