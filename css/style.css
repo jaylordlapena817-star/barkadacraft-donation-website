@@ -209,10 +209,20 @@ background:#f59e0b;
 margin-bottom:10px;
 
 }
+   
 
 .delete{
 
 background:#ef4444;
 
 } 
+}
+/* Receipt Image */
+.receipt-img{
+    width:250px;
+    max-width:100%;
+    height:auto;
+    border-radius:10px;
+    margin-top:15px;
+    cursor:pointer;
 }
