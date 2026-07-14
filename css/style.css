@@ -1,0 +1,106 @@
+/* ==========================
+   GOOGLE FONT
+========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#111827;
+    color:#fff;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+header{
+    width:100%;
+    background:#1f2937;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+    color:#4ade80;
+}
+
+nav{
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover,
+nav .active{
+    color:#4ade80;
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.btn{
+    display:inline-block;
+    background:#22c55e;
+    color:#fff;
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:12px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#16a34a;
+    transform:translateY(-3px);
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+    margin-top:80px;
+    padding:25px;
+    text-align:center;
+    background:#1f2937;
+    color:#ccc;
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    gap:15px;
+}
+
+nav{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+}
