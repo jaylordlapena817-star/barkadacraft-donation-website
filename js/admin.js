@@ -94,18 +94,23 @@ function render() {
 
 <div class="card">
 
-<h2>${data.ign}</h2>
+<h2>⛏ ${data.ign}</h2>
 
-<p><b>Type:</b> ${data.type}</p>
+<p><b>Type:</b> ${data.type || "N/A"}</p>
 
-<p><b>Amount:</b> ₱${data.amount}</p>
+<p><b>Discord:</b> ${data.discord || "N/A"}</p>
+
+<p><b>Duration:</b> ${data.duration || "N/A"}</p>
+
+<p><b>Amount:</b> ₱${data.amount || 0}</p>
+
+<p><b>Message:</b> ${data.message || "No message"}</p>
 
 <p><b>Status:</b> ${data.status}</p>
 
-<p><b>Date:</b> ${data.createdAt}</p>
+<p><b>Date:</b> ${new Date(data.createdAt).toLocaleString()}</p>
 
-<img
-src="${data.receiptUrl}"
+<img src="${data.receiptUrl}">
 style="
 width:100%;
 max-width:300px;
